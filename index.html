@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANDIDATE FORM</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/2e10b73d37.js" crossorigin="anonymous"></script>
+    <script>
+        function updateDate() {
+            const dateElement = document.querySelector('.date');
+            const today = new Date();
+
+            // Format the date (e.g., "Monday, September 18, 2024")
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = today.toLocaleDateString('en-US', options);
+
+            // Update the content of the date div
+            dateElement.textContent = `Today's date is ${formattedDate}`;
+        }
+
+        // Ensure the date is updated when the page loads
+        window.onload = updateDate;
+
+        function displayData(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get input values
+            const fullName = document.getElementById('full-name').value;
+            const amountPaid = document.getElementById('amount-paid').value;
+            const dateTime = document.getElementById('date-time').value;
+
+            // Display the inputted values on the page
+            const displaySection = document.getElementById('display-section');
+            displaySection.innerHTML = `
+                <h3>Payment Details</h3>
+                <p><strong>Full Name:</strong> ${fullName}</p>
+                <p><strong>Amount Paid:</strong> ₦${amountPaid}</p>
+                <p><strong>Date & Time of Payment:</strong> ${dateTime}</p>
+            `;
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            OFFICIAL DAN 2025 SUBSCRIBER FORM
+        </nav>
+    </header>
+    <div class="date"><p>Today's date is </p></div>
+    <!-- <div class="date2"><p>PRICE WILL INCREASE SOON BECAUSE WE DONT TAKE MUCH STUDENT</p></div> -->
+
+
+    <div class="gen1">
+        <div class="img">
+            <img src="./coat.jpeg">
+        </div>
+        <div><b>JOINT ADMISSION AND MATRICULATION BOARD</b>
+            <p>enhancing academic excellence...</p>
+        </div>
+        <div class="img">
+            <img src="./aamb.png">
+        </div>
+        
+    </div>
+
+    <div class="gen2">
+         <h1>2025 JAMB ASSISTANCE FORM</h1>
+         
+    </div>
+
+    <div class="gen3">
+        <h1>SECTION A</h1>
+        <b>NOTE : This aspect must be filled immediately after your payment</b>
+
+        <div class="form-container">
+            <h2>Payment Form</h2>
+            <form id="payment-form" onsubmit="displayData(event)">
+                <label for="full-name">Candidate Full Name:</label><br>
+                <input type="text" id="full-name" name="full-name" required><br><br>
+    
+                <label for="amount-paid">Amount Paid (₦):</label><br>
+                <input type="number" id="amount-paid" name="amount-paid" required><br><br>
+    
+                <label for="date-time">Date & Time of Payment:</label><br>
+                <input type="text" id="date-time" name="date-time" placeholder="e.g. 20/09/2024 by 8:30am" required><br><br>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    
+        <div id="display-section" class="display-data">
+            <!-- Submitted data will be displayed here -->
+        </div>
+
+
+    </div>
+    <div class="gen4">
+        <h2>Make sure you screenshot the SECTION A form that you filled and click on the Confirm Button </h2>
+        <button onclick="window.open('http://wa.me/2349027420688?text=I+have+filled+the+VIP+Form+Sir+This+is+the+screenshot')">CONFIRM</button>
+    </div>
+
+    <div class="gen5"><a href="https://wa.me/2349027420688">
+        <!-- <div class="img3">
+            <img src="./in image.jpg">
+        </div> -->
+
+        <div> <h1>START CHAT</h1> <div>
+            <div><i class="fa-brands fa-whatsapp"><a href="https://wa.me/2349027420688"></a></i></div>
+    
+        </a>
+        
+        </div>
+
+    <div class="gen6">
+        <div><h2>SECTION B</h2></div>
+        <div><p>Notes : This aspect will be filled only after your JAMB registration </p></div>
+    
+
+        <!-- <h2>SECTION B</h2> -->
+        <!-- <p>NOTES: This aspect will be filled only after your JAMB Registration (by January)</p> -->
+    
+        <form id="jambForm">
+            <label for="regNum">Registration Number: (required)</label>
+            <input type="text" id="regNum" required>
+    
+            <label for="profileCode">Profile Code: (required)</label>
+            <input type="text" id="profileCode" required>
+    
+            <label for="nin">Your NIN: (required)</label>
+            <input type="text" id="nin" required>
+    
+            <button type="button" class="button" onclick="submitForm()">Access Questions and Answers</button>
+        </form>
+
+
+    </div>
+
+    <div class="gen7">
+        <div><h1>only candidate that have make thier payment should fill the form<br>you can also make your payment today so that you can be part of our VIP Candidate</h1></div>
+       
+       <div><h2>Upload Your Payment Receipt</h2></div>
+
+        <form id="receiptForm">
+            <label for="receipt">Upload your payment receipt here: (required)</label>
+            <input type="file" id="receipt" accept="image/*" required>
+    
+            <button type="button" class="button" onclick="submitReceipt()">Submit</button>
+        </form>
+    
+    </div>
+
+    <div class="gen8">
+        <div><h1>CONGRATULATION TO YOU IF YOU HAVE SUBSCRIBE TO OFFICIAL DAN</h1></div>
+          <div><p> It is not too late for you to subscribe today if you are yet to subscribe</p></div>
+            <div ><button onclick="window.open('https://wa.me/2349027420688')">MESSAGE ADMIN NOW</button></div>
+
+            <div class="quote">
+               <div><h2>Weekly Success Quote</h2></div>
+              <div><p id="quote-text"></p></div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        function submitForm() {
+            // Get the form values
+            var regNum = document.getElementById('regNum').value.trim();
+            var profileCode = document.getElementById('profileCode').value.trim();
+            var nin = document.getElementById('nin').value.trim();
+
+            // Check if all fields are filled
+            if (!regNum || !profileCode || !nin) {
+                alert('Please fill in all the required fields.');
+                return;
+            }
+
+            // Prepare the WhatsApp message
+            var message = `Registration Number: ${regNum}, Profile Code: ${profileCode}, NIN: ${nin}`;
+            var whatsappUrl = `https://wa.me/2349027420688?text=${encodeURIComponent(message)}`;
+
+            // Redirect to WhatsApp
+            window.open(whatsappUrl, '_blank');
+        }
+
+
+    
+        function submitReceipt() {
+            // Get the uploaded file
+            var receiptFile = document.getElementById('receipt').files[0];
+
+            // Check if a file has been uploaded
+            if (!receiptFile) {
+                alert('Please upload your payment receipt.');
+                return;
+            }
+
+            // Get the file name
+            var receiptFileName = receiptFile.name;
+
+            // Prepare the WhatsApp message
+            var message = `I have uploaded my payment receipt. File Name: ${receiptFileName}`;
+            var whatsappUrl = `https://wa.me/2349027420688?text=${encodeURIComponent(message)}`;
+
+            // Redirect to WhatsApp
+            window.open(whatsappUrl, '_blank');
+        }
+
+
+        const quotes = [
+        "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful. – Albert Schweitzer",
+        "Success usually comes to those who are too busy to be looking for it. – Henry David Thoreau",
+        "Don’t be afraid to give up the good to go for the great. – John D. Rockefeller",
+        "I find that the harder I work, the more luck I seem to have. – Thomas Jefferson"
+    ];
+
+    function getQuoteIndex() {
+        const startDate = new Date('2024-01-01'); // Set this to the start date of your quote rotation
+        const today = new Date();
+        const daysSinceStart = Math.floor((today - startDate) / (1000 * 60 * 60 * 24));
+        return Math.floor(daysSinceStart / 3) % quotes.length;
+    }
+
+    function displayQuote() {
+        const quoteText = document.getElementById('quote-text');
+        const index = getQuoteIndex();
+        quoteText.textContent = quotes[index];
+    }
+
+    displayQuote();
+    
+    </script>
+
+
+    
+</body>
+</html>

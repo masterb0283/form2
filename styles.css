@@ -1,0 +1,287 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+header{
+    display: flex;
+    background-color: green;
+    color: white;
+    padding: 30px 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.date{
+    display: flex;
+    margin-left: 50px;
+
+}
+.date p{
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.gen1{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+.gen1 img{
+    width: 50px;
+}
+.gen1 b{
+    display: flex;
+    color: green;
+    text-align: center;
+    margin-left: 20px;
+}
+.gen1 p{
+    margin-left: 40px;
+    color: red;
+    font-style: italic;
+    font-size: 15px;
+}
+.gen2 h1{
+    display: flex;
+    text-align: center;
+    color: white;
+    background-color: darkgreen;
+}
+.gen3{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, red, green);
+}
+.gen3 h1{
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+.gen3 b{
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 300px;
+}
+
+.form-container h2 {
+    text-align: center;
+}
+
+.form-container label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.display-data {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+.gen4 {
+    background-color: darkblue;
+    color: white;
+}
+
+.gen4 button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #007BFF;
+    margin-left: 15%;
+    padding: 8px 90px;
+    background-color: darkred;
+    color: #fff;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+.gen5{
+    display: flex;
+    /* background-color: #4CAF50; */
+}
+.gen5 h1{
+    background-color: #4CAF50;
+    color: white;
+    padding-left: 70px;
+    border: 1px solid red;
+}
+.gen5 i{
+    color: green;
+    font-size: 35px;
+    margin-left: 30%;
+}
+.gen6 h2{
+    /* display: flex; */
+    border:2px solid darkgreen ;
+    border-radius: 20px;
+    background-color: darkred;
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+}
+.gen6 p{
+    background-color: red;
+    color: whitesmoke;
+}
+
+
+
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+/* .gen6 h2 {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+} */
+
+.gen6 label {
+    font-weight: bold;
+}
+
+.gen6 input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.gen6 .button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gen6 .button:hover {
+    background-color: darkblue;
+}
+
+/* body {
+    font-family: Arial, sans-serif;
+} */
+
+.gen7{
+    
+}
+.gen7 h1{
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin: 0px;
+    padding: 0%;
+    margin: 20px;
+    padding-left: 20px;
+    text-transform: capitalize;
+}
+.gen7 h2 {
+    color: white;
+    background-color: blue;
+    text-align: center;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid green;
+    border-radius: 5px;
+}
+
+.button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: darkblue;
+}
+
+.gen8 h1{
+margin: 0%;
+padding: 0%;
+margin-top: 20px;
+font-size: 20px;
+}
+
+.gen8 p{
+    color: red;
+    font-weight: bold;
+}
+.gen8 button{
+    display: flex;
+    color: whitesmoke;
+    background-color: #4CAF50;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25%;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.quote {
+    margin-top: 40px;
+    padding: 10px;
+    background-color: yellowgreen;
+    border-left: 5px solid #4CAF50;
+}
+
+.quote h2 {
+    font-size: 1.5em;
+    color: antiquewhite;
+    justify-content: center;
+}
+
+.quote p {
+    font-size: 1.2em;
+    color: #555;
+}
