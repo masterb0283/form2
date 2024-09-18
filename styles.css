@@ -22,6 +22,16 @@ header{
     justify-content: center;
     margin-left: 50px;
 }
+.emg{
+    display: flex;
+    /* background-color: green; */
+    color: red;
+    position: fixed;
+}
+.emg a{
+    background-color: green;
+    color: yellow;
+}
 
 .gen1{
     display: flex;
