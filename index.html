@@ -199,25 +199,37 @@
 
     
         function submitReceipt() {
-            // Get the uploaded file
-            var receiptFile = document.getElementById('receipt').files[0];
+    // Check if the form container fields are filled
+    var fullName = document.getElementById('full-name').value.trim();
+    var amountPaid = document.getElementById('amount-paid').value.trim();
+    var dateTime = document.getElementById('date-time').value.trim();
 
-            // Check if a file has been uploaded
-            if (!receiptFile) {
-                alert('Please upload your payment receipt.');
-                return;
-            }
+    // If any of the fields are empty, show an alert and don't proceed
+    if (!fullName || !amountPaid || !dateTime) {
+        alert('Please fill in all the fields in the SECTION A, before you can upload your receipt.');
+        return;
+    }
 
-            // Get the file name
-            var receiptFileName = receiptFile.name;
+    // Get the uploaded file
+    var receiptFile = document.getElementById('receipt').files[0];
 
-            // Prepare the WhatsApp message
-            var message = `I have uploaded my payment receipt. File Name: ${receiptFileName}`;
-            var whatsappUrl = `https://wa.me/2349027420688?text=${encodeURIComponent(message)}`;
+    // Check if a file has been uploaded
+    if (!receiptFile) {
+        alert('Please upload your payment receipt.');
+        return;
+    }
 
-            // Redirect to WhatsApp
-            window.open(whatsappUrl, '_blank');
-        }
+    // Get the file name
+    var receiptFileName = receiptFile.name;
+
+    // Prepare the WhatsApp message
+    var message = `I have uploaded my payment receipt. File Name: ${receiptFileName}`;
+    var whatsappUrl = `https://wa.me/2349027420688?text=${encodeURIComponent(message)}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+}
+
 
 
         const quotes = [
